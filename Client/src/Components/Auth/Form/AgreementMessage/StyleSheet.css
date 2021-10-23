@@ -1,0 +1,28 @@
+/***
+ * Copyright (C) Rodolfo Herrera Hernandez. All rights reserved.
+ * Licensed under the MIT license. See LICENSE file in the project root 
+ * for full license information.
+ *
+ * =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+ *
+ * For related information - https://github.com/CodeWithRodi/Cinastra/
+ *
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ ****/
+
+#Auth-Agreement-Message-Link{
+    font-weight: 700;
+    opacity: .5;
+}
+
+#Auth-Agreement-Message-Container{
+    font-size: .9rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 868px){
+    #Auth-Agreement-Message-Container{
+        font-size: .8rem;
+    }
+}

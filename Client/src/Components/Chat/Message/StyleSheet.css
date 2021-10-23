@@ -1,0 +1,30 @@
+/***
+ * Copyright (C) Rodolfo Herrera Hernandez. All rights reserved.
+ * Licensed under the MIT license. See LICENSE file in the project root 
+ * for full license information.
+ *
+ * =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+ *
+ * For related information - https://github.com/CodeWithRodi/Cinastra/
+ *
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ ****/
+
+.Chat-Generic-Message-Text::selection{
+    color: #d6d6d6;
+    background-color: #1c1c1c;
+}
+
+.Chat-Generic-Message-Name::selection{
+    color: #1c1c1c;
+    background-color: #d6d6d6;
+}
+
+.Chat-Generic-Message-Name, .Chat-Generic-Message-Text{
+    will-change: transform;
+    transition-duration: .5s;
+}
+
+.Chat-Generic-Message-Name:hover, .Chat-Generic-Message-Text:hover{
+    opacity: .7;
+}

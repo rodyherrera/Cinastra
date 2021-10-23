@@ -1,0 +1,17 @@
+{
+  "name": "cinastra-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Source/Core.js",
+  "scripts": {
+    "start": "nodemon Source/Core.js"
+  },
+  "keywords": [],
+  "author": "Rodolfo Herrera Hernandez @codewithrodi",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  }
+}

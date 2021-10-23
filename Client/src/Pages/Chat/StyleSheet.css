@@ -1,0 +1,57 @@
+/***
+ * Copyright (C) Rodolfo Herrera Hernandez. All rights reserved.
+ * Licensed under the MIT license. See LICENSE file in the project root 
+ * for full license information.
+ *
+ * =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+ *
+ * For related information - https://github.com/CodeWithRodi/Cinastra/
+ *
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ ****/
+
+#Chat-Main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem;
+    align-content: center;
+    height: calc(80vh - 1rem);
+}
+
+#Chat-Main > section{
+    background-color: #2b2b2b;
+    border-radius: .25rem;
+    padding: 1rem;
+    height: 30rem;
+    max-height: 30rem;
+    width: 45%;
+}
+
+#Chat-Messages-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media (max-width: 868px){
+    #Chat-Main{
+        align-items: center;
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    #Chat-Main > section{
+        width: 100%;
+    }
+
+    #Chat-Main > section:last-child{
+        height: auto;
+    }
+
+    #Chat-Main > section:not(:first-child){
+        margin-top: 2rem;
+    }
+}

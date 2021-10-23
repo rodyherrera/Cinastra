@@ -1,0 +1,56 @@
+{
+    "Server": {
+        "DefaultHostname": "0.0.0.0",
+        "DefaultPort": 6500
+    },
+
+    "SSL": {
+        "Cert": "",
+        "Key": ""
+    },
+
+    "Information": {
+        "Repository": "https://github.com/CodeWithRodi/Cinastra/",
+        "Author": "Rodolfo Herrera Hernandez",
+        "Mail": "contact@codewithrodi.com"
+    },
+
+    "FamilyFriendly": {
+        "BlockedWords": [
+            "puta", "idiota", "buseta", "imbecil", "gilipollas",
+            "tonto", "tonta", "puto", "sexo", "pene", "vagina", "suicidare",
+            "hijoputa", "hijaputa", "cabrona", "maricona", "maricon",
+            "pendeja", "pendejo", "tarada", "tarado", "mongola",
+            "mongolico", "gilipollesca", "pelotuda", "pelotudo", "retardada",
+            "retardado", "retrasado", "retrasada", "huevona", "huevon",
+            "incestuosa", "incestuoso", "caradeconcha", "mamaguevos", "ojete",
+            "orto", "nalgas", "hija de puta", "hijo de puta", "zoquete",
+            "necrofilica", "necrofilico", "suicidarme", "matar", "hacker",
+            "hack", "hacked", "culo", "cretina", "cretino", "reputa", "soputa",
+            "reputo", "soputo", "turra", "turro", "mal nacida", "mal nacido",
+            "bitch", "moron", "fool", "douchebag", "sex", "dick", "penis", "pussy",
+            "queer", "asshole", "mongolian", "retard", "retarded", "eyelet",
+            "ortho", "buttocks", "oaf", "necrophilic", "kill", "kill myself", "ass"
+        ]
+    },
+
+    "Chat": {
+        "Message": {
+            "MaxLength": 2048
+        }
+    },
+
+    "Auth": {
+        "Fields": {
+            "Username": {
+                "MaxLength": 14,
+                "MinLength": 4
+            },
+
+            "Room": {
+                "MaxLength": 14,
+                "MinLength": 4
+            }
+        }
+    }
+}
