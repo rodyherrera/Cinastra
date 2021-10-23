@@ -78,7 +78,7 @@ import * as Declarations from '../Configuration.json';
     * the application routes for each page, this to use them in 
     * the router and show the user content according to their path.
 */
-const { OnConnect, OnDisconnect } = Declarations.UserExperience;
+const { OnConnect, OnDisconnect } = Declarations.UserExperience.NetworkListeners;
 const Routes = Declarations.Routes;
 
 /*
