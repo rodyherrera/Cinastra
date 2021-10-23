@@ -53,12 +53,11 @@ In the configuration file mentioned above there are other statements that will b
 It is time to give the last touch to start our messaging application, we must start the client application, but `the client application does NOT know which is the address of the server` to which it has to connect to start interacting with the Socket, it is That is why the client application also contains a `configuration file, this is located inside its directory, in the 'src' folder`, therefore you must enter the Client directory, then the src directory and then open the `Configuration.json` file , in which you will find a key called `"Backend"` which has another called `"Server"` that must have as value `the address of the server that was previously established`, this should look something like this:
 ```bash
 "Backend": {
-    "Server": "http://0.0.0.0:6500/",
+    "Server": "http://codewithrodi.com:6500/",
     "ConnectionTimeOut": 10000
 }
 ```
-
-`Where "Server" should have the same address that has been defined previously in the server configuration file` or the address that is assigned using arguments.
+`Where "Server" should have the same address that has been defined previously in the server configuration file`, in this case we have previously assigned 0.0.0.0:6500, as my server has the domain 'codewithrodi' say that 0.0.0.0:6500 is the same as codewithrodi.com:6500, that is why we add that address here, if you are running this on your `localhost` you should add `'http://0.0.0.0:6500'`
 
 If you notice inside the Client folder you have an .env file, which contains the `PORT where you want the ReactJS application to run, by default it is 5500.`
 
