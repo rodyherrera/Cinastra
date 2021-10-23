@@ -84,7 +84,7 @@ The servers should be initialized so that if you access the React application se
 If you want to use SSL certificate both on the server or on the client in this section we will explain how to do it, inside the Client folder there is a file called .env, which contains statements that the server will use, where is `HTTPS`, `SSL_CRT_FILE` and `SSL_KEY_FILE` which you must complete according to the address of those files in the anatomy of the client's source code, for example:
 
 ```bash
-# (INT .env file of Client folder)
+# (IN .env file of Client folder)
 HTTPS = true
 SSL_CRT_FILE = MyCertFile.pem
 SSL_KEY_FILE = MyKeyFile.pem
