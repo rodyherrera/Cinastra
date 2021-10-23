@@ -65,14 +65,14 @@ export default function OpenSource(){
                 * when using our service.
             */}
             <div>
-                <p>Cisantra is open source under the MIT license, a license that allows the 
-                reuse of software, both to be free and private, Cisantra is open to 
+                <p>Cinastra is open source under the MIT license, a license that allows the 
+                reuse of software, both to be free and private, Cinastra is open to 
                 collaborations and new integrations, being open source people who understand 
                 how the technology with which it works. This software built can find vulnerabilities 
                 and misuse them, but of course it was mentioned when we talked about the danger, we 
                 are not responsible for the use that is given to this anonymous and temporary 
                 messaging software, when using the MIT license, the software is more accessible 
-                to a greater number of developers, they are free to use the source code of Cisantra 
+                to a greater number of developers, they are free to use the source code of Cinastra 
                 as they please and do whatever they are, both for their own benefit and to improve 
                 the application and be something more than a simple experiment.</p>
             </div>           
