@@ -17,6 +17,7 @@
     ? Backend server of our service.
 */
 const Http = require('http');
+const Https = require('https');
 const Express = require('express');
 const SocketIO = require('socket.io');
 const Router = require('./Network/Router');
@@ -44,7 +45,15 @@ const ServerConfig = Helpers.GetServerConfig();
     ? in other parts of our software.
 */
 const Application = Express();
-const Server = Http.createServer(ServerConfig.SSL, Application);
+
+let Server;
+
+if(ServerConfig.SSL.cert && ServerConfig.SSL.key)
+    Server = Https.createServer(ServerConfig.SSL, Application);
+else
+    Server = Http.createServer(Application);
+
+
 const IO = SocketIO(Server, {
     cors: {
         origin: '*'
