@@ -85,9 +85,10 @@ If you want to use SSL certificate both on the server or on the client in this s
 ```bash
 # (IN .env file of Client folder)
 HTTPS = true
-SSL_CRT_FILE = MyCertFile.crt
-SSL_KEY_FILE = MyKeyFile.key
+SSL_CRT_FILE = .MyCertFile.crt
+SSL_KEY_FILE = .MyKeyFile.key
 ```
+`Adding SSL to the local ReactJS server has not been tested.`
 
 For the server it is quite similar, the only thing you have to do is go to the configuration file that is located at the root of the `'Server'` directory and look for where it says `"SSL"`, where it has two fields, one called "Cert" and the other `Key`. "which you must complete so that the SSL of the backend server can be done, for example:
 
@@ -98,6 +99,17 @@ For the server it is quite similar, the only thing you have to do is go to the c
 }
 ```
 and you could now npm start both the client server and the server with your SSL configuration!
+
+### Building the react application
+ This will allow you to run the compiled application in a way that will be more optimized and will not use large resources, you only need to execute the following commands.
+```bash
+# (In Client directory)
+npm install -g serve
+# Building
+npm run build
+# Starting the server
+serve -s build
+```
 
 ### Contributions
 Cinastra was only created to test my skills with these technologies, it is expected that updates are reviewed for good, you are free to do with the code and do something much better or contribute to it.
