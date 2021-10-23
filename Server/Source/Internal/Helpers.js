@@ -158,8 +158,8 @@ const GetServerConfig = () => {
     const SSL = {};
 
     if(FileSystem.existsSync(SSLConfig.Cert) && FileSystem.existsSync(SSLConfig.Key)){
-        SSL.Cert = FileSystem.readFileSync(ServerConfig.SSL.Cert);
-        SSL.Key = FileSystem.readFileSync(ServerConfig.SSL.Key);
+        SSL.Cert = FileSystem.readFileSync(ServerConfig.Cert);
+        SSL.Key = FileSystem.readFileSync(ServerConfig.Key);
     }
 
     /*
