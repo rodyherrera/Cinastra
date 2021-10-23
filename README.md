@@ -80,22 +80,21 @@ cd Server && npm start
 The servers should be initialized so that if you access the React application server you could already be viewing content and if the server has loaded you can start using the application.
 
 ### Using SSL
-##### Not tested
 If you want to use SSL certificate both on the server or on the client in this section we will explain how to do it, inside the Client folder there is a file called .env, which contains statements that the server will use, where is `HTTPS`, `SSL_CRT_FILE` and `SSL_KEY_FILE` which you must complete according to the address of those files in the anatomy of the client's source code, for example:
 
 ```bash
 # (IN .env file of Client folder)
 HTTPS = true
-SSL_CRT_FILE = MyCertFile.pem
-SSL_KEY_FILE = MyKeyFile.pem
+SSL_CRT_FILE = MyCertFile.crt
+SSL_KEY_FILE = MyKeyFile.key
 ```
 
 For the server it is quite similar, the only thing you have to do is go to the configuration file that is located at the root of the `'Server'` directory and look for where it says `"SSL"`, where it has two fields, one called "Cert" and the other `Key`. "which you must complete so that the SSL of the backend server can be done, for example:
 
 ```bash
 "SSL": {
-    "Cert": "MyCertFile.pem",
-    "Key": "MyKeyFile.pem"
+    "Cert": "./MyCertFile.crt",
+    "Key": "./MyKeyFile.key"
 }
 ```
 and you could now npm start both the client server and the server with your SSL configuration!
