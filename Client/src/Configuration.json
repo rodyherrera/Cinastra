@@ -1,6 +1,6 @@
 {
     "Backend": {
-        "Server": "https://codewithrodi.com:6500/",
+        "Server": "api.cinastra.codewithrodi.com",
         "ConnectionTimeOut": 10000
     },  
 
