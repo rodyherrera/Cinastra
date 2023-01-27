@@ -1,5 +1,5 @@
 # Cinastra
-[Visit the public DEMO of the software.](https://cutternet.codewithrodi.com/)
+[Visit the public DEMO of the software.](https://cinastra.codewithrodi.com/)
 
 #### Private, anonymous and temporary messaging for everyone
 Cinastra is a private and temporary messaging web service that allows you to interact with people around the world through rooms, you can create the rooms that you want in an unlimited way and with unlimited users within them, everything that is spoken will not be saved in the cloud or in some database, everything is stored at runtime.
