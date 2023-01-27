@@ -50,33 +50,28 @@ npm start port::6500 hostname::0.0.0.0
 # Or
 npm start port=6500 hostname=0.0.0.0
 ```
-In the configuration file mentioned above there are other statements that will be used throughout the execution of the program, I invite you to look at the source code, it is all documented and you can see how they work and interact with the configuration file.
 
 ### Configuring the Client application
-It is time to give the last touch to start our messaging application, we must start the client application, but `the client application does NOT know which is the address of the server` to which it has to connect to start interacting with the Socket, it is That is why the client application also contains a `configuration file, this is located inside its directory, in the 'src' folder`, therefore you must enter the Client directory, then the src directory and then open the `Configuration.json` file , in which you will find a key called `"Backend"` which has another called `"Server"` that must have as value `the address of the server that was previously established`, this should look something like this:
+It is time to give the last touch to start our messaging application, we must start the client application, but `the client application does NOT know which is the address of the server` to which it has to connect to start interacting with the Socket, it is That is why the client application also contains a `configuration file, this is located inside its directory, in the 'src' folder`, therefore you must enter the Client directory, then the src directory and then open the `Infrastructure.json` file , in which you will find a key called `"Backend"` which has another called `"Server"` that must have as value `the address of the server that was previously established`, this should look something like this:
 ```bash
 "Backend": {
     "Server": "https://api.cinastra.codewithrodi.com/",
     "ConnectionTimeOut": 10000
 }
 ```
-`Where "Server" should have the same address that has been defined previously in the server configuration file`, in this case we have previously assigned 0.0.0.0:6500, as my server has the domain 'codewithrodi' say that 0.0.0.0:6500 is the same as codewithrodi.com:6500, that is why we add that address here, if you are running this on your `localhost` you should add `'http://0.0.0.0:6500'`
-
-If you notice inside the Client folder you have an .env file, which contains the `PORT where you want the ReactJS application to run, by default it is 5500.`
-
-Finally, you will notice that the client configuration file is also extensive, the source code is all documented so that you can visualize and learn from it and see how one thing interacts with the other.
+The value of the "Server" key must contain the ENDPOINT or address where the Cinastra backend is running, in this case, the default value is "https://api.codewithrodi.com", where it is located the backend of the demo application.
 
 ### Starting the application
 You should open two consoles, one to initialize the client's server and the other to initialize the server.
 ```bash
 # (IN THE ROOT DIRECTORY)
-cd Client && npm start
+cd Client && npm run start
 ```
 
 Now on the other console
 ```bash
 # (IN THE ROOT DIRECTORY)
-cd Server && npm start
+cd Server && npm run start
 ```
 
 The servers should be initialized so that if you access the React application server you could already be viewing content and if the server has loaded you can start using the application.
