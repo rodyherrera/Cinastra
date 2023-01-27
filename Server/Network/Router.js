@@ -10,14 +10,13 @@
  * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
  ****/
 
-import React from 'react';
-import StrangerMessage from './MessageTypes/Stranger';
-import OwnerMessage from './MessageTypes/Owner';
-import './Message.css';
+const Express = require('express');
+const Router = Express.Router();
 
-export default function Message({ Message: { Text, User }, GetName }){
-    return User === GetName ?
-        <OwnerMessage Text={Text} Owner={User} />
-    :
-        <StrangerMessage Text={Text} User={User} />
-};
+Router.get('/', (Request, Response) => {
+    Response.send({
+        Response: 'Cinastra Backend Server'
+    }).status(200);
+});
+
+module.exports = Router;

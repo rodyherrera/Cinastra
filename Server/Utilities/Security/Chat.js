@@ -10,14 +10,15 @@
  * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
  ****/
 
-import React from 'react';
-import StrangerMessage from './MessageTypes/Stranger';
-import OwnerMessage from './MessageTypes/Owner';
-import './Message.css';
+const Declarations = JSON.parse(require('fs').readFileSync('./Infrastructure.json'));
+const { ParseToFamilyFriendly } = require('./FamilyFriendly');
 
-export default function Message({ Message: { Text, User }, GetName }){
-    return User === GetName ?
-        <OwnerMessage Text={Text} Owner={User} />
-    :
-        <StrangerMessage Text={Text} User={User} />
-};
+const { MaxLength } = Declarations.Chat.Message;
+
+const ParseMessage = (Message) => {
+    if(Message.length > MaxLength)
+        Message = Message.slice(0, MaxLength);
+    return ParseToFamilyFriendly(Message);
+}
+
+module.exports = { ParseMessage };

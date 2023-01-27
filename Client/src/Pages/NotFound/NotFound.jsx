@@ -10,14 +10,19 @@
  * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
  ****/
 
-import React from 'react';
-import StrangerMessage from './MessageTypes/Stranger';
-import OwnerMessage from './MessageTypes/Owner';
-import './Message.css';
+import React, { useEffect } from 'react';
+import { Navigate } from 'react-router';
+import { Alert } from '../../Components/Alert/Alert';
+import * as Declarations from '../../Infrastructure.json';
 
-export default function Message({ Message: { Text, User }, GetName }){
-    return User === GetName ?
-        <OwnerMessage Text={Text} Owner={User} />
-    :
-        <StrangerMessage Text={Text} User={User} />
+export default function NotFound(){
+    const Routes = Declarations.Routes;
+   
+    useEffect(() => {
+        Alert({
+            Message: Declarations.UserExperience.Pages.OnNotFound,
+            Type: 'Information' });
+    }, []);
+
+    return <Navigate to={Routes.Auth} />
 };

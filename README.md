@@ -1,7 +1,10 @@
 # Cinastra
-#### Private, anonymous and temporary messaging for everyone
+[Visit the public DEMO of the software.](https://cutternet.codewithrodi.com/)
 
+#### Private, anonymous and temporary messaging for everyone
 Cinastra is a private and temporary messaging web service that allows you to interact with people around the world through rooms, you can create the rooms that you want in an unlimited way and with unlimited users within them, everything that is spoken will not be saved in the cloud or in some database, everything is stored at runtime.
+
+![Presentation of the platform](https://github.com/CodeWithRodi/Cinastra/blob/main/Screenshots/Presentation.png?raw=true)
 
 ### Features
 - High privacy
@@ -31,7 +34,7 @@ cd ../Server && npm install
 Once you have installed the node_modules from the client and server source code, `we can move on to the next section that pertains to the configuration so that you can correctly mount the services`.
 
 ### Configuring the Server application
-Inside the repository directory there is the `Server folder`, where it has a `.json file that is called Configuration`, this file contains statements that will be used throughout the execution of the server, in this file you must `configure the address where you want the server is running`, where you must declare the hostname and port of the same, by `default the hostname is '0.0.0.0' and the port is 6500`, you can modify them to your need, the file would be something like this:
+Inside the repository directory there is the `Server folder`, where it has a `.json file that is called Infrastructure`, this file contains statements that will be used throughout the execution of the server, in this file you must `configure the address where you want the server is running`, where you must declare the hostname and port of the same, by `default the hostname is '0.0.0.0' and the port is 6500`, you can modify them to your need, the file would be something like this:
 
 ```bash
 "Server": {
@@ -53,7 +56,7 @@ In the configuration file mentioned above there are other statements that will b
 It is time to give the last touch to start our messaging application, we must start the client application, but `the client application does NOT know which is the address of the server` to which it has to connect to start interacting with the Socket, it is That is why the client application also contains a `configuration file, this is located inside its directory, in the 'src' folder`, therefore you must enter the Client directory, then the src directory and then open the `Configuration.json` file , in which you will find a key called `"Backend"` which has another called `"Server"` that must have as value `the address of the server that was previously established`, this should look something like this:
 ```bash
 "Backend": {
-    "Server": "https://codewithrodi.com:6500/",
+    "Server": "https://api.cinastra.codewithrodi.com/",
     "ConnectionTimeOut": 10000
 }
 ```
@@ -79,16 +82,6 @@ cd Server && npm start
 The servers should be initialized so that if you access the React application server you could already be viewing content and if the server has loaded you can start using the application.
 
 ### Using SSL
-If you want to use SSL certificate both on the server or on the client in this section we will explain how to do it, inside the Client folder there is a file called .env, which contains statements that the server will use, where is `HTTPS`, `SSL_CRT_FILE` and `SSL_KEY_FILE` which you must complete according to the address of those files in the anatomy of the client's source code, for example:
-
-```bash
-# (IN .env file of Client folder)
-HTTPS = true
-SSL_CRT_FILE = .MyCertFile.crt
-SSL_KEY_FILE = .MyKeyFile.key
-```
-`Adding SSL to the local ReactJS server has not been tested.`
-
 For the server it is quite similar, the only thing you have to do is go to the configuration file that is located at the root of the `'Server'` directory and look for where it says `"SSL"`, where it has two fields, one called "Cert" and the other `Key`. "which you must complete so that the SSL of the backend server can be done, for example:
 
 ```bash
@@ -97,20 +90,6 @@ For the server it is quite similar, the only thing you have to do is go to the c
     "Key": "./MyKeyFile.key"
 }
 ```
-and you could now npm start both the client server and the server with your SSL configuration!
-
-### Building the react application
- This will allow you to run the compiled application in a way that will be more optimized and will not use large resources, you only need to execute the following commands.
-```bash
-# (In Client directory)
-npm install -g serve
-# Building
-npm run build
-# Starting the server
-serve -s build
-```
 
 ### Contributions
-Cinastra was only created to test my skills with these technologies, it is expected that updates are reviewed for good, you are free to do with the code and do something much better or contribute to it.
-
-### Remember to drink water bby.
+Cinastra is under the MIT license, the software is open to any eventual construction, as well as allowing third parties to use its source code for their own benefit.

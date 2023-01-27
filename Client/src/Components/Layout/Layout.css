@@ -1,0 +1,50 @@
+/***
+ * Copyright (C) Rodolfo Herrera Hernandez. All rights reserved.
+ * Licensed under the MIT license. See LICENSE file in the project root 
+ * for full license information.
+ *
+ * =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+ *
+ * For related information - https://github.com/CodeWithRodi/Cinastra/
+ * 
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ ****/
+ 
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Header-Navegation-Links-Container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Header-Navegation-Links-Container li:not(:last-child){
+    margin-right: 1rem;
+}
+
+.Header-Icon{
+    font-size: 1.5rem;
+}
+
+footer{
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-height: 640px){
+    footer{
+        display: none;
+    }
+}
+
+@media (max-width: 868px){
+    footer{
+        display: none;
+    }
+}

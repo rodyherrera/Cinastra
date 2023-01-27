@@ -10,11 +10,6 @@
     "background_color": "#121212",
     "icons": [
       {
-        "src": "Images/Icon.ico",
-        "sizes": "64x64 32x32 24x24 16x16",
-        "type": "image/x-icon"
-      },
-      {
         "src": "Images/Apple/57x57.png",
         "type": "image/png",
         "sizes": "57x57.png"

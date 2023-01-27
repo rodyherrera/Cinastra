@@ -10,14 +10,6 @@
  * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
  ****/
 
-import React from 'react';
-import StrangerMessage from './MessageTypes/Stranger';
-import OwnerMessage from './MessageTypes/Owner';
-import './Message.css';
+import Layout from './Layout';
 
-export default function Message({ Message: { Text, User }, GetName }){
-    return User === GetName ?
-        <OwnerMessage Text={Text} Owner={User} />
-    :
-        <StrangerMessage Text={Text} User={User} />
-};
+export default Layout;

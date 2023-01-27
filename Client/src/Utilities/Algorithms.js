@@ -10,14 +10,9 @@
  * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
  ****/
 
-import React from 'react';
-import StrangerMessage from './MessageTypes/Stranger';
-import OwnerMessage from './MessageTypes/Owner';
-import './Message.css';
-
-export default function Message({ Message: { Text, User }, GetName }){
-    return User === GetName ?
-        <OwnerMessage Text={Text} Owner={User} />
-    :
-        <StrangerMessage Text={Text} User={User} />
-};
+export const StringGenerator = (Length = 8, Characters = '123456789abcdefABCDEF') => {
+    let Buffer = '';
+    for(let Iterator = 0; Iterator < Length; Iterator++)
+        Buffer += Characters.charAt(Math.floor(Math.random() * Length));
+    return Buffer;
+}

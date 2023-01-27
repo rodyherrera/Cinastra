@@ -1,0 +1,107 @@
+/***
+ * Copyright (C) Rodolfo Herrera Hernandez. All rights reserved.
+ * Licensed under the MIT license. See LICENSE file in the project root 
+ * for full license information.
+ *
+ * =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+ *
+ * For related information - https://github.com/CodeWithRodi/Cinastra/
+ *
+ * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+ ****/
+
+
+#Auth-Fields-Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Auth-Container{
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #2b2b2b;
+}
+
+.Auth-Field-Container{
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px){
+    #Auth-Connect-Button-Container{
+        width: 100%;
+    }   
+
+    #Auth-Fields-Container{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .Auth-Field-Container{
+        margin-right: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+}
+
+#Join-Main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: calc(80vh - 1rem);
+}
+
+#Join-Main #Welcome-Section{
+    text-align: center;
+}
+
+#Join-Main #Welcome-Section article{
+    margin: 1rem 0;
+}
+
+#Join-Main .Page-Heading{
+    font-size: 56px;
+    margin: 15px auto 0;
+    font-weight: 600;
+    width: 100%;
+    max-width: 830px;
+}
+
+@media (max-width: 868px){
+    #Join-Main{
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    #Join-Main section{
+        width: 100%;
+    }
+}
+
+@media (max-height: 420px){
+    #Join-Main{
+        height: 100%;
+    }
+}
+
+#Auth-Agreement-Message-Link{
+    font-weight: 700;
+    opacity: .5;
+}
+
+#Auth-Agreement-Message-Container{
+    font-size: .9rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 868px){
+    #Auth-Agreement-Message-Container{
+        font-size: .8rem;
+    }
+}
