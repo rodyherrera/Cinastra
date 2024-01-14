@@ -1,11 +1,11 @@
 {
     "Backend": {
-        "Server": "https://api.cinastra.codewithrodi.com",
+        "Server": "https://api.cinastra.rodyherrera.com",
         "ConnectionTimeOut": 10000
     },  
 
     "Cinastra": {
-        "Repository": "https://github.com/CodeWithRodi/Cinastra/",
+        "Repository": "https://github.com/rodyherrera/Cinastra/",
         "Author": "Rodolfo Herrera Hernandez"
     },
 

@@ -5,7 +5,7 @@
  *
  * =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
  *
- * For related information - https://github.com/CodeWithRodi/Rosmarin/
+ * For related information - https://github.com/rodyherrera/Rosmarin/
  *
  * Source code for Rosmarin, an open source platform designed for the general 
  * student center of the Salesian Institution in Talca, Chile.

@@ -1,10 +1,10 @@
 # Cinastra
-[Visit the public DEMO of the software.](https://cinastra.codewithrodi.com/)
+[Visit the public DEMO of the software.](https://cinastra.rodyherrera.com/)
 
 #### Private, anonymous and temporary messaging for everyone
 Cinastra is a private and temporary messaging web service that allows you to interact with people around the world through rooms, you can create the rooms that you want in an unlimited way and with unlimited users within them, everything that is spoken will not be saved in the cloud or in some database, everything is stored at runtime.
 
-![Presentation of the platform](https://github.com/CodeWithRodi/Cinastra/blob/main/Screenshots/Presentation.png?raw=true)
+![Presentation of the platform](https://github.com/rodyherrera/Cinastra/blob/main/Screenshots/Presentation.png?raw=true)
 
 ### Features
 - High privacy
@@ -22,7 +22,7 @@ To install and run this software without problems you will need to do the instal
 
 ```bash
 # Cloning the repository
-git clone https://github.com/CodeWithRodi/Cinastra/
+git clone https://github.com/rodyherrera/Cinastra/
 # Accessing the generated directory
 cd Cinastra
 # Accessing the client's source code directory and installing the nodes_modules
@@ -55,11 +55,11 @@ npm start port=6500 hostname=0.0.0.0
 It is time to give the last touch to start our messaging application, we must start the client application, but `the client application does NOT know which is the address of the server` to which it has to connect to start interacting with the Socket, it is That is why the client application also contains a `configuration file, this is located inside its directory, in the 'src' folder`, therefore you must enter the Client directory, then the src directory and then open the `Infrastructure.json` file , in which you will find a key called `"Backend"` which has another called `"Server"` that must have as value `the address of the server that was previously established`, this should look something like this:
 ```bash
 "Backend": {
-    "Server": "https://api.cinastra.codewithrodi.com/",
+    "Server": "https://api.cinastra.rodyherrera.com/",
     "ConnectionTimeOut": 10000
 }
 ```
-The value of the "Server" key must contain the ENDPOINT or address where the Cinastra backend is running, in this case, the default value is "https://api.codewithrodi.com", where it is located the backend of the demo application.
+The value of the "Server" key must contain the ENDPOINT or address where the Cinastra backend is running, in this case, the default value is "https://api.rodyherrera.com", where it is located the backend of the demo application.
 
 ### Starting the application
 You should open two consoles, one to initialize the client's server and the other to initialize the server.
